@@ -15,7 +15,7 @@ export default {
           setTimeout(() => {
             this.dataApi = r;
             this.loading = false;
-          });
+          }, 1000);
         });
     },
   },

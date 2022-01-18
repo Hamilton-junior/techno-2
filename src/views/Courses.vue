@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>Cursos</h1>
-    {{dataApi}}
+    <div v-if="loading">
+      <PageLoading />
+    </div>
+    <div v-if="dataApi">
+      <h1>Cursos</h1>
+      {{dataApi}}
+    </div>
   </div>
 </template>
 

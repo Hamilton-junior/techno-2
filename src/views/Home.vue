@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>Home</h1>
-    {{dataApi}}
+    <div v-if="loading">
+      <PageLoading />
+    </div>
+    <div v-if="dataApi">
+       <h1>Home</h1>
+      {{dataApi}}
+    </div>
   </div>
 </template>
 
@@ -18,5 +23,5 @@ export default {
 </script>
 
 <style>
-
+  
 </style>
