@@ -31,6 +31,10 @@ a {
   text-decoration: none;
   color: #234;
 }
+img {
+  max-width: 100%;
+  display: block;
+}
 a.router-link-exact-active {
   color: #4b8;
 }
@@ -38,5 +42,23 @@ a.router-link-exact-active {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.v-enter {
+  opacity: 0;
+  transform: translate3d(-20px,0,0);
+}
+.v-enter-active {
+  transition: all .3s;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px);
+  gap: 30px;
+}
+@media (max-width: 400px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

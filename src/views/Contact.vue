@@ -3,10 +3,12 @@
     <div v-if="loading">
       <PageLoading />
     </div>
-    <div v-if="dataApi">
-      <h1>Contato</h1>
-    {{dataApi}}
-    </div>
+    <transition>
+      <div v-if="dataApi">
+        <h1>Contato</h1>
+        {{dataApi}}
+      </div>
+    </transition>
   </div>
 </template>
 
