@@ -9,7 +9,7 @@
           <h1>{{ dataApi.titulo }}</h1>
           <p>{{ dataApi.descricao }}</p>
         </div>
-        <ul>
+        <ul class="courses-list">
           <li v-for="curso in dataApi.cursos" :key="curso.id">
             <h2>
               <router-link :to="{ name: 'curso', params: { curso: curso.id } }"
@@ -37,4 +37,7 @@ export default {
 </script>
 
 <style>
+  .courses-list li{
+    margin-bottom: 40px;
+  }
 </style>
